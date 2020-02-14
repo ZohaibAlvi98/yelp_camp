@@ -1,0 +1,24 @@
+<%- include('partials/header') %> 
+
+
+<div class="container">
+    <div class="row">
+        <div style="width: 30%; margin: 0 auto;">
+        
+            <h1 style="width: 200%; margin: 15% auto;">Login To YelpCamp</h1>
+                <form style="margin: 25px auto;" action="/login" method="post">
+                   <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-lg btn-primary btn-default btn-block" value="Login">
+                    </div>
+                </form>
+            </div>
+       </div>
+   </div>
+</div>
+<%- include('partials/footer') %> 
