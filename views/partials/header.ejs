@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="/stylesheet/show.css"> 
 </head>
 <body>
-        <nav class="navbar navbar-default">
+        <nav style="background-color: #9BBFCF" class="navbar navbar-default">
                 <div class="container-fluid">
                   <div class="navbar-header">
-                    <a class="navbar-brand" href="/">YelpCamp</a>
+                    <a style="padding-left: 105px; color: azure;" class="navbar-brand" href="/">YelpCamp</a>
                   </div>
                   <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                      <% if(!currentUser){ %>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">SignUp</a></li>
+                        <li><a style="padding-right: 5px; color: azure;" href="/login">LogIn</a></li>
+                        <li><a style="padding-right: 90px; color: azure;" href="/register">SignUp</a></li>
                   <% } 
                       else
                       { %>
-                        <li> <a href="#"><%= currentUser.username %> </a></li>
-                        <li><a href="/logout">Logout</a></li>
+                        <li> <a style="padding-right: 5px; color: azure;" href="#"><%= currentUser.username %> </a></li>
+                        <li><a style="padding-right: 90px; color: azure;" href="/logout">Logout</a></li>
                       <% } %>
                      
                     </ul>

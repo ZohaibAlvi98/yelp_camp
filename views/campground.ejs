@@ -2,17 +2,17 @@
 
 <div class="container">
 
-<header class="jumbotron">
+<header style="background-color: #7BC6CC"class="jumbotron">
     <div class="container">
-  <h1>Welcome To YelpCamp Campgrounds</h1>
-  <p>Images from around the world</p>
+  <h1 style="color: azure;" ><img style="width: 100px;" src="/images/tent.png">Welcome To YelpCamp!</h1>
+  <p style="color: azure;" >View our campgrounds from all over the world or you can add yours!</p>
   <p>
       <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add A Camp Ground Now!! </a>
   </p>
   <div class="container"></div>
 </header>
 
-   <div class="row text-center">
+   <div class="row text-center" style="display: flex; flex-wrap: wrap;">
      <% campGrounds.forEach(function(camps){ %>
           <div class="col-md-3 col-sm-6">
             <div class="thumbnail">

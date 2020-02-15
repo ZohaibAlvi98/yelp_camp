@@ -18,7 +18,7 @@ campgroundRoutes = require("./routes/campground"),
 authRoutes = require("./routes/auth")
 //seeds();
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-zohaib:prince1234@cluster0-x8iaz.mongodb.net/yelp_camp", { useNewUrlParser: true , useUnifiedTopology: true});
 mongoose.set('useFindAndModify', false);
 // campgroundModel.create(
 //     {
