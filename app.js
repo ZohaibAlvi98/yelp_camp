@@ -20,21 +20,6 @@ authRoutes = require("./routes/auth")
 
 mongoose.connect("mongodb+srv://admin-zohaib:prince1234@cluster0-x8iaz.mongodb.net/yelp_camp", { useNewUrlParser: true , useUnifiedTopology: true});
 mongoose.set('useFindAndModify', false);
-// campgroundModel.create(
-//     {
-//         name: "Mubarak Village",
-//         image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
-//         desc: "This is Mubarak Village No Bathrooms No water. Beautiful Place!!!"
-//     }, function(err, campground){
-//     if(err)
-//     {
-//         console.log("Something Went Wrong")
-//     }
-//     else
-//     {
-//         console.log(campground)
-//     }
-//     });
 
 app.set("view engine","ejs")
 
@@ -67,17 +52,4 @@ app.use("/campgrounds/:id/comments",commentRoutes)
 app.use(authRoutes)
 app.use("/campgrounds",campgroundRoutes)
 
-// var campGrounds = [
-//     {name: "Mubarak Village" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-//     {name: "Hill Park" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-//     {name: "ChangaManga" , image: "https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"},
-//     {name: "Mubarak Village" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-//     {name: "Hill Park" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-//     {name: "ChangaManga" , image: "https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"},
-//     {name: "Mubarak Village" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-//     {name: "Hill Park" , image: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"},
-// ]
-
-app.listen(3000, function(){
-    console.log("The YelpCamp Server Has Started");
-})
+app.listen(process.env.PORT || 5000)
